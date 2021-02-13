@@ -10,7 +10,7 @@ export default function App() {
         alignItems: "center",
       }}
     >
-      <Text>Projeto Tec OS</Text>
+      <Text>testegit</Text>
     </View>
   );
 }
