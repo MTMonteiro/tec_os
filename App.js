@@ -1,3 +1,4 @@
+
 import  React, { Component } from "react";
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons'; 
@@ -30,6 +31,7 @@ render(){
     <MaterialIcons name="dashboard" size={60} color="white" />
      <Text style={styles.texto}>Dashboard</Text>
     </TouchableOpacity>
+
     </View>
 
     <View style={styles.view1}>
