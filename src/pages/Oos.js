@@ -1,45 +1,39 @@
-import React, { Component } from 'react';
-import { FlatList, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+// import React in our code
+import React from "react";
 
-export default class FlatListBasics extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <View> 
-          
-        <Text styles={styles.text}>Minhas Oos</Text>
+// import all the components we are going to use
+import { SafeAreaView, Text, View, StyleSheet, Image } from "react-native";
+import { MaterialIcons } from "@expo/vector-icons";
+//import Card
+import { Card } from "react-native-paper";
+import CardOs from "../components/CardOs";
 
-          <TouchableOpacity>
-          <MaterialCommunityIcons name="file-alert-outline" size={30} color="black" />
-          <Text>Serviço 1</Text>
-          </TouchableOpacity>
+export default function Oos() {
+  return (
+    <SafeAreaView style={styles.containerCard}>
+      <Text>Minhas OSs</Text>
+      <CardOs
+        logo="JA"
+        title="120 - Exemplo de OS: Manutenção periódica dos ACs da recepção"
+        time="Aberta há 2 horas"
+        priority="alta"
+      />
 
+    <CardOs
+        logo="DC"
+        title="122 - Mais uma Os"
+        time="Aberta há 2 dias"
+        priority="media"
+      />
 
-        </View>
-      
-        
-        
-      </View>
-    );
-  }
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 22,
-  },
-  item: {
+  containerCard: {
+    justifyContent: "center",
     padding: 10,
-    fontSize: 18,
-    height: 44,
+    backgroundColor: "#ecf0f1",
   },
-  text:{
-  fontSize: 20
-  }
- 
 });
