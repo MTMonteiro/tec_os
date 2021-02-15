@@ -12,9 +12,10 @@ import {
 } from "react-native";
 import { Card } from "react-native-paper";
 import * as Location from "expo-location";
+import { AntDesign } from '@expo/vector-icons';
 
 export default function Visitas() {
-  const [location, setLocation] = useState(null);
+  const [location, setLocation] = useState({coords: {latitude: -22.9000000, longitude: -42.9000000}});
   const [errorMsg, setErrorMsg] = useState(null);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ export default function Visitas() {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      // Alert.alert("teste " + JSON.stringify(location));
+      // Alert.alert("teste " + JSON.stringify(location.coords.latitude) +" "+ JSON.stringify(location.coords.longitude));
       setLocation(location);
     })();
   }, []);
@@ -36,8 +37,8 @@ export default function Visitas() {
       <Card style={estiles2.card}>
         <View style={estiles2.header}>
           {/* <Octicons name="file" size={35} color="white" /> */}
-
-          <Text style={estiles2.texto}>Minhas Oos</Text>
+          <AntDesign name="enviromento" size={35} color="white" />
+          <Text style={estiles2.texto}>Visitas</Text>
         </View>
       </Card>
 
@@ -125,6 +126,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    marginTop: 25
     // alignItems: 'center',
     // justifyContent: 'center',
   },
