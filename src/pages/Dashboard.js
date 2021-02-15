@@ -2,36 +2,50 @@
 import React from "react";
 
 // import all the components we are going to use
-import { SafeAreaView, Text, View, StyleSheet, Image } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+import { SafeAreaView, Text, View, StyleSheet, ScrollView } from "react-native";
+
 //import Card
 import { Card } from "react-native-paper";
-import CardOs from "../components/CardOs";
-import { Ionicons } from "@expo/vector-icons";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Oos() {
+
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import Dadoviews from '../components/Dadoviews';
+import Tecnicos from '../components/Tecnicos';
+import Prv from '../components/Prv'
+
+
+export default function Dashboard() {
   return (
-    <View style={{ backgroundColor: "#98F", flex: 1 }}>
+
+    <SafeAreaView style={{ backgroundColor: "#98F", flex: 1, marginTop: 25 }}>
+      
+     
       <Card style={estiles2.card}>
         <View style={estiles2.header}>
         <MaterialCommunityIcons name="file-table-box-multiple-outline" size={30} color="white" />
 
           <Text style={estiles2.texto}>Dashboard</Text>
+          
         </View>
-        <SafeAreaView style={styles.containerCard1}>
-        <CardOs
+        </Card>
+
+
+        <ScrollView>
+        <View style={styles.containerCard1}>
+        
+        <Tecnicos
+           nome= "Pe"
           logo="JA"
           title="Técnico: Pedro"
           time="Em visita"
           priority=""
         />
-      </SafeAreaView>
+      </View>
 
       <Text style={{backgroundColor: '#f1f1f1', elevation: 2
     }}>Em endamento:</Text>
-      <SafeAreaView style={styles.containerCard}>
-        <CardOs
+      <View style={styles.containerCard}>
+        <Dadoviews
           logo="JA"
           title="119 - Visita no IMD"
           time="0:00:55"
@@ -41,16 +55,13 @@ export default function Oos() {
         />
 
       
-      </SafeAreaView>
+      </View>
 
       <Text style={{backgroundColor: '#f1f1f1'}}>Próximas Visitas:</Text>
-      
-      
-      
-      </Card>
+    
 
-      <SafeAreaView style={styles.containerCard}>
-        <CardOs
+      <View style={styles.containerCard}>
+        <Prv
           logo="JA"
           title="120 -Visita ao PDA"
           time="Aberta há 2 horas"
@@ -58,14 +69,33 @@ export default function Oos() {
           texto="Os: Adicionar agua no  "
         />
 
-        <CardOs
+        <Prv
           logo="DC"
           title="121 - Visita ao CMI"
           time="Aberta há 2 dias"
           priority="baixa"
+          texto="Os: Verificar o motor"
         />
-      </SafeAreaView>
-    </View>
+        <Prv 
+        logo="JA"
+        title="122 - Visita ao Batalhão"
+        time= "Aberta há 1 min"
+        priority="media"
+        texto="Os: verificar o ar"
+        />
+
+        <Prv 
+        logo="JA"
+        title="123 - Visita ao WDC"
+        time= "Aberta há 30s"
+        priority="media"
+        texto="Os: Trocar o cabo"
+        />
+
+      </View>
+      </ScrollView>
+    </SafeAreaView>
+    
   );
 }
 

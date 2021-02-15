@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
-import { MaterialIcons } from "@expo/vector-icons";
+
 import { Card } from "react-native-paper";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -12,7 +12,7 @@ const colorsPriority = {
 };
 var Acolor;
 var color;
-export default function Dadoviews({
+export default function Prv({
   logo,
   title,
   time,
@@ -46,7 +46,7 @@ export default function Dadoviews({
             </View>
 
             <View style={styles.containerFlex2}>
-              <Text style={styles.time}>{time}</Text>
+              
             </View>
           </View>
         </View>
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F3F781",
+    backgroundColor: "#2ECCFA",
     width: 80,
     height: 80,
     borderRadius: 10,

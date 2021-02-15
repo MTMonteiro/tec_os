@@ -8,14 +8,14 @@ const colorsPriority = {
 alta: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
 media: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
 baixa: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
-"": {color: "#F8E0E6", borda: "#F8E0E6", background: "#F8E0E6"},
+
 }
 var Acolor
 var color
-export default function CardOs({ logo, title, time, priority, texto, icon }) {
+export default function CardOs({ logo, title, time, priority,}) {
     Acolor =  colorsPriority[priority]
     color = Acolor.color 
-   icon = <AntDesign name="right" size={30} color="black" />
+ 
     return (
     <View style={styles.container}>
       <Card>
@@ -35,18 +35,11 @@ export default function CardOs({ logo, title, time, priority, texto, icon }) {
 
           
             <View style={styles.title2}>
-              
-              <TouchableOpacity>
-              {icon}
-              </TouchableOpacity>
+             
               
               
               </View>
-            <View>
-              <Text>
-                {texto}
-              </Text>
-            </View>
+            
 
 
              </View>
