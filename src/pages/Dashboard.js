@@ -28,7 +28,7 @@ export default function Oos() {
         />
       </SafeAreaView>
 
-      <Text style={{backgroundColor: '#CED8F6',
+      <Text style={{backgroundColor: '#f1f1f1', elevation: 2
     }}>Em endamento:</Text>
       <SafeAreaView style={styles.containerCard}>
         <CardOs
@@ -43,7 +43,7 @@ export default function Oos() {
       
       </SafeAreaView>
 
-      <Text style={{backgroundColor: '#CED8F6'}}>Próximas Visitas:</Text>
+      <Text style={{backgroundColor: '#f1f1f1'}}>Próximas Visitas:</Text>
       
       
       
