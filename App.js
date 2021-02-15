@@ -123,7 +123,7 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 
 
 import Oos from './src/pages/Oos'
-import Home from './src/pages/Home'
+import Home from './src/pages/Visitas'
 import Dashboard from './src/pages/Dashboard'
 import Chat from './src/pages/Chat'
 import Qrcode from './src/pages/Qrcode'
@@ -133,6 +133,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Menu from "./src/components/MenuBottom";
+import Visitas from "./src/pages/Visitas";
 const Tab = createMaterialBottomTabNavigator();
 
 export default function MyTabs() {
@@ -166,10 +167,10 @@ export default function MyTabs() {
         />
 
         <Tab.Screen
-          name="Home"
-          component={Home}
+          name="Visitas"
+          component={Visitas}
           options={{
-            tabBarLabel: "Home",
+            tabBarLabel: "Visitas",
             tabBarIcon: ({ color }) => (
               <Ionicons name="ios-home" size={26} color={color} />
             ),
