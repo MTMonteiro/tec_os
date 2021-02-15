@@ -55,7 +55,7 @@ import { Octicons } from '@expo/vector-icons';
 export default function Oos() {
   return (
 
-<View style={{backgroundColor: '#98F', flex:1}}>
+<View style={{backgroundColor: '#f1f1f1', flex:1}}>
 <Card style={estiles2.card}>
 <View style={estiles2.header}>
 
