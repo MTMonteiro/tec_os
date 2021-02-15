@@ -20,7 +20,9 @@ export default function CardOs({ logo, title, time, priority }) {
       <Card>
         <View style={styles.containerFlex}>
           <View style={styles.containerFlexColumn}>
-            <View style={styles.logo}>{logo}</View>
+            <View style={styles.logo}> 
+            <Text >LA</Text>
+            </View>
           </View>
 
           <View>
@@ -48,12 +50,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#ecf0f1",
   },
   title: {
-    fontSize: 18,
+    fontSize: 15,
     fontWeight: "bold",
     textAlign: "left",
     padding: 20,
     color: "#58ACFA",
-    cursor: "pointer",
+    // cursor: "pointer"
   },
 
   priority: {
@@ -62,14 +64,16 @@ const styles = StyleSheet.create({
     textAlign: "left",
     paddingHorizontal: 8,
     paddingVertical: 0,
-    height: "2.5rem",
-    marginLeft: "1rem",
+    height: 30,
+    marginLeft: 6,
     backgroundColor: "#F8E0E6",
     color: color,
-    border: "2px solid #FA5882",
+    // border: "2px solid #FA5882",
+    borderWidth: 2,
+    borderColor: "#FA5882",
     display: "flex",
     alignItems: "center",
-    borderRadius: "15px",
+    borderRadius: 15,
   },
 
   time: {
@@ -78,14 +82,16 @@ const styles = StyleSheet.create({
     textAlign: "left",
     paddingHorizontal: 8,
     paddingVertical: 0,
-    height: "2.5rem",
-    marginLeft: "1rem",
+    height: 30,
+    marginLeft: 4,
     backgroundColor: "#E0F8F7",
     color: "#00BFFF",
-    border: "2px solid #00BFFF",
+    // border: "2px solid #00BFFF",
+    borderWidth: 2,
+    borderColor: "#00BFFF",
     display: "flex",
     alignItems: "center",
-    borderRadius: "15px",
+    borderRadius: 15,
   },
 
   containerFlex: {
@@ -109,7 +115,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     position: "relative",
     justifyContent: "center",
-    marginLeft: "2rem",
+    marginLeft: 4,
     // padding: 20,
   },
   logo: {
@@ -118,9 +124,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "blue",
-    width: "100px",
-    height: "100%",
-    borderRadius: "50%",
-    fontSize: "30px",
+    width: 80,
+    height: 80,
+    borderRadius: 20,
+    fontSize: 30,
   },
 });
