@@ -26,7 +26,7 @@ export default function Visitas() {
       }
 
       let location = await Location.getCurrentPositionAsync({});
-      Alert.alert("teste " + JSON.stringify(location));
+      // Alert.alert("teste " + JSON.stringify(location));
       setLocation(location);
     })();
   }, []);
