@@ -4,7 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Text, View } from "react-native";
 
-export default function Home() {
+export default function Visitas() {
   return(
   <View style={{backgroundColor:'#98F', flex: 1}}>
     
