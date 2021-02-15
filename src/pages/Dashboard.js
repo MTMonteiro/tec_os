@@ -8,13 +8,14 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { Card } from "react-native-paper";
 import CardOs from "../components/CardOs";
 import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Oos() {
   return (
     <View style={{ backgroundColor: "#98F", flex: 1 }}>
       <Card style={estiles2.card}>
         <View style={estiles2.header}>
-          <Ionicons name="menu" size={40} color="white" />
+        <MaterialCommunityIcons name="file-table-box-multiple-outline" size={30} color="white" />
 
           <Text style={estiles2.texto}>Dashboard</Text>
         </View>
@@ -27,7 +28,7 @@ export default function Oos() {
         />
       </SafeAreaView>
 
-      <Text style={{backgroundColor: '#98F',
+      <Text style={{backgroundColor: '#CED8F6',
     }}>Em endamento:</Text>
       <SafeAreaView style={styles.containerCard}>
         <CardOs
@@ -42,7 +43,7 @@ export default function Oos() {
       
       </SafeAreaView>
 
-      <Text style={{backgroundColor: '#98F'}}>Próximas Visitas:</Text>
+      <Text style={{backgroundColor: '#CED8F6'}}>Próximas Visitas:</Text>
       
       
       
