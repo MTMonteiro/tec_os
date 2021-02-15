@@ -16,7 +16,7 @@ const Tab = createMaterialBottomTabNavigator();
 
 export default function MyTabs() {
   return (
-    <NavigationContainer style={{backgroundColor: '#6A5ACD'}}>
+    <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Feed"
         activeColor="white"

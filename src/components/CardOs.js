@@ -1,32 +1,56 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Card } from "react-native-paper";
+import { AntDesign } from '@expo/vector-icons';
 
 const colorsPriority = {
 alta: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
 media: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
 baixa: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
-
+"": {color: "#F8E0E6", borda: "#F8E0E6", background: "#F8E0E6"},
 }
 var Acolor
 var color
-export default function CardOs({ logo, title, time, priority }) {
+export default function CardOs({ logo, title, time, priority, texto, icon }) {
     Acolor =  colorsPriority[priority]
     color = Acolor.color 
-
+   icon = <AntDesign name="right" size={30} color="black" />
     return (
     <View style={styles.container}>
       <Card>
         <View style={styles.containerFlex}>
           <View style={styles.containerFlexColumn}>
             <View style={styles.logo}> 
-            <Text >LA</Text>
+            <Text >la</Text>
             </View>
           </View>
 
           <View>
             <Text style={styles.title}>{title}</Text>
+
+          <View style={{alignItems: 'stretch',
+           flexDirection: 'row'
+        }}>
+
+          
+            <View style={styles.title2}>
+              
+              <TouchableOpacity>
+              {icon}
+              </TouchableOpacity>
+              
+              
+              </View>
+            <View>
+              <Text>
+                {texto}
+              </Text>
+            </View>
+
+
+             </View>
+
 
             <View style={styles.containerFlex2}>
               <Text style={styles.priority}>{priority}</Text>
@@ -48,6 +72,19 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     padding: 10,
     backgroundColor: "#98F",
+  },
+  title2: {
+    fontSize: 15,
+    fontWeight: "bold",
+    textAlign: "left",
+    padding: 0,
+    color: "#58ACFA",
+    // alignItems: 'flex-end',
+    // justifyContent: 'flex-end',
+    // alignContent: 'flex-end',
+    // flexDirection: 'row',
+    right: -237
+
   },
   title: {
     fontSize: 15,
@@ -123,10 +160,10 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "blue",
+    backgroundColor: "#BCA9F5",
     width: 80,
     height: 80,
-    borderRadius: 20,
+    borderRadius: 50,
     fontSize: 30,
   },
 });

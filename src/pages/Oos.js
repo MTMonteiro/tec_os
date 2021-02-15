@@ -72,7 +72,7 @@ export default function Oos() {
       
       <CardOs
         logo="JA"
-        title="120 - Exemplo de OS: Manutenção periódica dos ACs da recepção"
+        title="120 - Manutenção periódica "
         time="Aberta há 2 horas"
         priority="alta"
       />
