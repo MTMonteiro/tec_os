@@ -121,9 +121,14 @@ import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 // })
 // export default menu;
 
-import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { AntDesign } from '@expo/vector-icons';
+
+import Oos from './src/pages/Oos'
+import Home from './src/pages/Home'
+import Dashboard from './src/pages/Dashboard'
+import Chat from './src/pages/Chat'
+import { MaterialIcons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { AntDesign } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import Menu from "./src/components/MenuBottom";
@@ -132,23 +137,67 @@ const Tab = createMaterialBottomTabNavigator();
 export default function MyTabs() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        initialRouteName="Feed"
+        activeColor="white"
+        barStyle={{ backgroundColor: "#6A5ACD" }}
+      >
         <Tab.Screen
-          name="Home"
-          component={Menu}
+          name="Chat"
+          component={Chat}
           options={{
-            tabBarLabel: "Updates",
-            tabBarIcon: <Ionicons name="home" size={60} color="black" />,
+            tabBarLabel: "Chat",
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="chatbubbles-outline" size={26} color={color} />
+            ),
           }}
         />
 
         <Tab.Screen
-          name="Settings"
+          name="Dashboard"
+          component={Dashboard}
+          options={{
+            tabBarLabel: "Dashboard",
+            tabBarIcon: ({ color }) => (
+              <MaterialIcons name="dashboard" size={26} color={color} />
+            ),
+          }}
+        />
+
+        <Tab.Screen
+          name="Home"
+          component={Home}
+          options={{
+            tabBarLabel: "Home",
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="ios-home" size={26} color={color} />
+            ),
+          }}
+        />
+
+        <Tab.Screen
+          name="Oos"
+          component={Oos}
+          options={{
+            tabBarLabel: "Oos",
+            tabBarIcon: ({ color }) => (
+              <AntDesign name="profile" size={24} color={color} />
+            ),
+          }}
+        />
+
+
+<Tab.Screen
+          name="Qrcode"
           component={Menu}
           options={{
-            //tabBarLabel: "Updates2",
-            tabBarIcon:() => ( <MaterialIcons name="dashboard" size={26} color="black"/>)}}
+            tabBarLabel: "Qrcode",
+            tabBarIcon: ({ color }) => (
+              <AntDesign name="qrcode" size={24} color={color} />
+            ),
+          }}
         />
+
       </Tab.Navigator>
     </NavigationContainer>
   );
