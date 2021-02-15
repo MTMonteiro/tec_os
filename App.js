@@ -126,6 +126,7 @@ import Oos from './src/pages/Oos'
 import Home from './src/pages/Home'
 import Dashboard from './src/pages/Dashboard'
 import Chat from './src/pages/Chat'
+import Qrcode from './src/pages/Qrcode'
 import { MaterialIcons } from "@expo/vector-icons";
 import { Ionicons } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
@@ -189,7 +190,7 @@ export default function MyTabs() {
 
 <Tab.Screen
           name="Qrcode"
-          component={Menu}
+          component={Qrcode}
           options={{
             tabBarLabel: "Qrcode",
             tabBarIcon: ({ color }) => (
