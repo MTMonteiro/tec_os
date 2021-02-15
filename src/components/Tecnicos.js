@@ -2,51 +2,59 @@ import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Card } from "react-native-paper";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign } from '@expo/vector-icons';
 
 const colorsPriority = {
-  alta: { color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
-  media: { color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
-  baixa: { color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
-  "": { color: "#F8E0E6", borda: "#F8E0E6", background: "#F8E0E6" },
-};
-var Acolor;
-var color;
-export default function Dadoviews({
-  logo,
-  title,
-  time,
-  priority,
-  texto,
-  icon,
-}) {
-  Acolor = colorsPriority[priority];
-  color = Acolor.color;
-  icon = <AntDesign name="right" size={30} color="black" />;
-  return (
+alta: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
+media: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
+baixa: {color: "#FE2E64", borda: "#FA5882", background: "#F8E0E6" },
+"": {color: "#F8E0E6", borda: "#F8E0E6", background: "#F8E0E6"},
+}
+var Acolor
+var color
+export default function Tecnicos({ logo, title, time, priority, texto, nome}) {
+    Acolor =  colorsPriority[priority]
+    color = Acolor.color 
+   
+    return (
     <View style={styles.container}>
       <Card>
         <View style={styles.containerFlex}>
           <View style={styles.containerFlexColumn}>
-            <View style={styles.logo}>
-              <Text>la</Text>
+            <View style={styles.logo}> 
+            <Text >{nome}</Text>
             </View>
           </View>
 
           <View>
             <Text style={styles.title}>{title}</Text>
 
-            <View style={{ alignItems: "stretch", flexDirection: "row" }}>
-              <View style={styles.title2}>
-                <TouchableOpacity>{icon}</TouchableOpacity>
+          <View style={{alignItems: 'stretch',
+           flexDirection: 'row'
+        }}>
+
+          
+            <View style={styles.title2}>
+              
+            
+              
               </View>
-              <View>
-                <Text>{texto}</Text>
-              </View>
+            <View>
+              <Text>
+                {texto}
+              </Text>
             </View>
 
+
+             </View>
+
+
             <View style={styles.containerFlex2}>
-              <Text style={styles.time}>{time}</Text>
+              
+              <Text style={styles.time}>
+                
+                {time}
+              </Text>
             </View>
           </View>
         </View>
@@ -72,7 +80,8 @@ const styles = StyleSheet.create({
     // justifyContent: 'flex-end',
     // alignContent: 'flex-end',
     // flexDirection: 'row',
-    right: -237,
+    right: -237
+
   },
   title: {
     fontSize: 15,
@@ -148,10 +157,10 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#F3F781",
+    backgroundColor: "#BCA9F5",
     width: 80,
     height: 80,
-    borderRadius: 10,
+    borderRadius: 50,
     fontSize: 30,
   },
 });
