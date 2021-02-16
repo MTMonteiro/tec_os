@@ -2,7 +2,7 @@
     "expo": {
      "name": "Tec Os",
      "icon": "./src/assets/Tec_os_logo.png",
-     "version": "0.0.1",
+     "version": "0.0.2",
      "slug": "Tec-Os",
      "splash": {
         "image": "./src/assets/Tec_os_logo.png",
