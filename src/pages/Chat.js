@@ -1,13 +1,22 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { Text, View, Button, Alert } from "react-native";
+import { Text, View, Button, Alert, ScrollView, TouchableOpacity } from "react-native";
 import { GiftedChat } from "react-native-gifted-chat";
+import Cardmsg from "../components/Cardmsg";
 
 export default function Chat() {
-  const [chat, setChat] = useState(false);
+  const [chat, setChat] = useState(true);
 
   if (chat == false) {
     return <ChatMessage setChat={setChat} chat={chat}/>;
   }
+
+
+  var numbers = [{nome:"Leo", title:"Técnico", status:"Disponível"},
+                 {nome:"Alex", title:"Técnico", status:"Indisponível"}, 
+                 {nome:"João", title:"Técnico", status:"Em Visita"}, 
+                 {nome:"Pedro", title:"Técnico", status:"Em Visita"}];
+ 
+                 
 
   return (
     <View style={{ backgroundColor: "#98F", flex: 1, marginTop: 30 }}>
@@ -16,9 +25,35 @@ export default function Chat() {
         title="Inicia Chat"
         color="#6A5ACD"
       />
+
+
+
+<ScrollView>
+  {numbers.map((b, key) => {
+     
+    return <TouchableOpacity
+onPress={() => setChat(!chat)}
+key={key}
+> 
+        <Cardmsg
+        nome= {b.nome}
+        title= {b.title}
+        status={b.status}
+        
+      />
+</TouchableOpacity>})}
+
+
+
+
+
+</ScrollView>
     </View>
   );
 }
+
+
+
 
 export function ChatMessage({setChat, chat}) {
   const [messages, setMessages] = useState([]);
