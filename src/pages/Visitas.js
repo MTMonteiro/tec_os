@@ -97,7 +97,7 @@ export default function Visitas() {
           </View>
 
           <Button
-            onPress={() => Alert.alert("Clica na mãe pra ver se quica")}
+            onPress={() => Alert.alert("Função ainda não implementada")}
             title="Iniciar"
             color="#6A5ACD"
           />
@@ -112,7 +112,7 @@ export default function Visitas() {
           </View>
 
           <Button
-            onPress={() => Alert.alert("Clica na mãe pra ver se quica")}
+            onPress={() => Alert.alert("Função ainda não implementada")}
             title="Check-in"
             color="#6A5ACD"
           />
