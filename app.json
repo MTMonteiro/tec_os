@@ -1,0 +1,23 @@
+{
+    "expo": {
+     "name": "Tec Os",
+     "icon": "./src/assets/Tec_os_logo.png",
+     "version": "0.0.1",
+     "slug": "Tec-Os",
+     "splash": {
+        "image": "./src/assets/Tec_os_logo.png",
+        "backgroundColor": "#6A5ACD"
+      },
+      "assetBundlePatterns": [
+        "*/"
+      ],
+     "ios": {
+       "bundleIdentifier": "com.yourcompany.yourappname",
+       "buildNumber": "1.0.0"
+     },
+     "android": {
+       "package": "com.scifi.tec_os",
+       "versionCode": 1
+     }
+    }
+  }
